@@ -1,0 +1,6 @@
+[submodule "swig-fun/cpp/eigen-git-mirror"]
+	path = swig-fun/cpp/eigen-git-mirror
+	url = https://github.com/eigenteam/eigen-git-mirror.git
+[submodule "swig-fun/cpp/eigen"]
+	path = swig-fun/cpp/eigen
+	url = https://github.com/eigenteam/eigen-git-mirror.git

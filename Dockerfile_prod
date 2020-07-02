@@ -1,0 +1,9 @@
+FROM datascience:prod
+
+COPY . . 
+
+ADD ai_utils ai_utils/
+
+RUN pip install ai_utils/
+
+RUN pip install -r requirements.txt

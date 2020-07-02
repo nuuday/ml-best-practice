@@ -1,0 +1,13 @@
+FROM datascience:dev
+
+COPY requirements.txt /app
+
+RUN pip install -r requirements.txt
+
+ADD ai_utils ai_utils/
+
+RUN pip install ai_utils/
+
+USER palpatine:palpatine
+
+ENTRYPOINT ["fixuid"]
