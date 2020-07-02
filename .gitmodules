@@ -4,3 +4,9 @@
 [submodule "swig-fun/cpp/eigen"]
 	path = swig-fun/cpp/eigen
 	url = https://github.com/eigenteam/eigen-git-mirror.git
+[submodule "ai_utils"]
+	path = ai_utils
+	url = ssh://git@10.74.139.97:7999/hkrp/ai_utils.git
+[submodule "swig-fun/knn-cpp"]
+	path = swig-fun/knn-cpp
+	url = https://github.com/Rookfighter/knn-cpp.git

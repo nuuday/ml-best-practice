@@ -36,8 +36,8 @@ if platform.startswith("linux"):
 lib_path = "cpp"
 
     
-module_lib_ml-magic = Extension(
-    name = 'music_core._ml-magic', 
+module_lib_ml_magic = Extension(
+    name = '_ml_magic', 
     sources = [os.path.join(lib_path, 'ml-magic.cpp'), os.path.join(lib_path, 'ml-magic.i')], 
     extra_compile_args=['-DUSE_ASSERT_EXCEPTIONS','-DSWIG_PYTHON_SILENT_MEMLEAK','-std=gnu++11', "-fopenmp"],
     include_dirs=[numpy_include, '.', 'cpp/eigen'],
@@ -48,11 +48,11 @@ module_lib_ml-magic = Extension(
 
 
 setup (
-      name = 'ml-magic',
+      name = 'ml_magic',
       version = '0.1',
       author = "Mads Fogtmann",
       description = "Magically machine learning in cpp",
       packages = find_packages(where = '.'),
       package_dir = {'':'.'},
-      ext_modules=[module_lib_ml-magic]
+      ext_modules=[module_lib_ml_magic]
 )

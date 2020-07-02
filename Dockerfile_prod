@@ -2,8 +2,18 @@ FROM datascience:prod
 
 COPY . . 
 
+RUN apt-get update \
+    && apt-get install -y \
+        gcc \
+        g++ \
+        swig \
+	emacs25 \
+	libeigen3-dev \
+    && apt-get clean -y
+    
 ADD ai_utils ai_utils/
 
 RUN pip install ai_utils/
 
 RUN pip install -r requirements.txt
+RUN pip install -r requirements-swig-fun.txt
