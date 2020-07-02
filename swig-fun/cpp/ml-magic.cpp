@@ -19,9 +19,9 @@ void inplace_element_mult1(double* arg1, int arg1_n, int arg1_m,
   for(int r=0; r<n; r++) {
     double* arg1_r = arg1 + m*r;
     double* arg2_r = arg2 + m*r;
-    double* res_r = res + m*r
+    double* res_r = res + m*r;
     for(int c=0; c<m; c++) {
-      *res_r++ =  arg1_r++ * arg2_r++;
+      *res_r++ =  *arg1_r++ * *arg2_r++;
     }
   }
   
@@ -38,9 +38,9 @@ void inplace_element_mult2(double* arg1, int arg1_n, int arg1_m,
 
   MatrixType m3 = m1.array()*m2.array();
 
-  double m3_data = m3.data()
-  for(int r<n*m; r++){
-    *res++ = m3_data++;
+  double* m3_data = m3.data();
+  for(int r=0; r<n*m; r++){
+    *res++ = *m3_data++;
   }  
 }
 
